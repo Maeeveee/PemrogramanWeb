@@ -1,0 +1,38 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: lightblue;
+    line-height: 1.65;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.container-satu {
+    width: 1000px;
+    margin: 50px;
+    background-color: rgb(134, 224, 224);
+    opacity: 0.9;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.sidebar-satu {
+    width: 150px;
+    order: -1;
+}
+
+.kolom-utama {
+    width: 400px;
+}
+
+.sidebar-dua {
+    width: 300px;
+    order: 1;
+}
