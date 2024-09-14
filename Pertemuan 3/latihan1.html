@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Latihan 1</title>
+    <style>
+        .main {
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            padding: 20px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .row label {
+            width: 150px;
+        }
+
+        .row input, .row textarea {
+            flex-grow: 1
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="container">
+            <div class="row">
+                <label for="nama">Nama</label>
+                <input type="text" id="nama" name="nama">
+            </div>
+            <div class="row">
+                <label for="alamat">Alamat</label>
+                <textarea name="alamat" id="alamat" cols="30" rows="4"></textarea>
+            </div>
+            <div class="row">
+                <label for="tanggalLahir">Tanggal Lahir</label>
+                <input type="date" id="TL" name="tanggalLahir">
+            </div>
+            <div class="row">
+                <label>Jenis Kelamin</label>
+                <input type="radio" name="jenisKelamin" id="lk"> Laki Laki
+                <input type="radio" name="jenisKelamin" id="pr"> Perempuan
+            </div>
+            <div class="row">
+                <label>Hobby</label>
+                <input type="checkbox" name="hobby" id="brng"> Berenang
+                <input type="checkbox" name="hobby" id="berlari"> Berlari
+                <input type="checkbox" name="hobby" id="lain"> Lain-lain
+            </div>
+            <div class="row">
+                <label>Pekerjaan</label>
+                <input type="checkbox" name="pekerjaan" id="swsta"> Swasta
+                <input type="checkbox" name="pekerjaan" id="pns"> PNS
+                <input type="checkbox" name="pekerjaan" id="lainP"> Lain-lain
+            </div>
+            <div>
+                <input type="checkbox" name="setuju" id="setuju"> saya setuju
+            </div>
+            <div >
+                <button onclick="cek()">cek</button>
+                
+            </div>
+        </div>
+    </div>
+
+    <script>    
+            function cek() {
+            const nama = document.getElementById("nama").value;
+            const alamat = document.getElementById("alamat").value;
+            const tanggalLahir = document.getElementById("TL").value;
+            const jenisKelamin = document.querySelector('input[name="jenisKelamin"]:checked');
+            const setuju = document.getElementById("setuju").checked;
+
+            if (nama === "" || alamat === "" || tanggalLahir === "" || !jenisKelamin || !setuju) {
+                alert("Harap mengisi semua kolom dan menyetujui syarat dan ketentuan.");
+            } else {
+                alert("Form sudah terisi lengkap!");
+            }
+            }
+            
+ 
+    </script>
+</body>
+</html>
