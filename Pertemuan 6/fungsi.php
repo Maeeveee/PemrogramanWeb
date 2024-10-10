@@ -9,8 +9,6 @@
         echo "Umur Saya adalah ".hitungUmur(2005, 2024)."<br>";
         echo "Senang berkenalan dengan anda<br>";
     }
-
-
     echo"<hr>";
     $saya = "Elok";
     $salam = "Selamat Datang";
